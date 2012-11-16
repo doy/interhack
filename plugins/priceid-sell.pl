@@ -32,12 +32,12 @@ sub do_sell_id {
 		$sale = int ($price/3) if ($role eq 'Tou' && $xlvl <= 15) || $shirt;
 		if ($amount == $sale){
 			push @prices,$price;
-			push @possibilities, @{$obj{$price}};
+			push @possibilities, @{$short_names{$type}{$price}||$obj{$price}};
 		};
 		$sale=int($sale*3/4 +0.5); # round up
 		if ($amount == $sale){
 			push @prices,$price;
-			push @possibilities, @{$obj{$price}};
+			push @possibilities, @{$short_names{$type}{$price}||$obj{$price}};
 		};
 	};
 	my $cost=join"/",@prices;
