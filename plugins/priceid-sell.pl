@@ -58,6 +58,11 @@ sub do_sell_id {
 			$tab="\e,\e#name\nn${slot}${appearance} ${name}\n";
 			$txt.=" [TAB to name it]";
 		};
+		if(!$sell_id_tab_nice){
+			$txt="Press tab to send the string: $tab";
+			$txt =~ s/\n/\\n/g;
+			$txt =~ s/\e/\\e/g;
+		};
 	}
 	annotate($txt);
 };
