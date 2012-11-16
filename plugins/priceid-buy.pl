@@ -84,7 +84,7 @@ our %price_table =
 		  },
   'cloak' => {
               50 => ['displacement', 'protection'],
-              50 => ['invisibility', 'magic resistance'],
+              60 => ['invisibility', 'magic resistance'],
 		  },
 );
 
