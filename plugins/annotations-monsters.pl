@@ -7,8 +7,11 @@ my $attack_roll = qr/[0-9]+(?:d[0-9]+)?/;
 my $attack_suffix = qr/[ACDEFHMPRSVbcdehimrstwxz.+\-"&<#\$*@]|![CDI]/;
 my $attack = qr/(?:[\[(])?$attack_prefix?$attack_roll$attack_suffix?(?:[\])])?/;
 
+<<<<<<< HEAD
 my $species = qr/[A-Za-z '@&;:]/;
 
+=======
+>>>>>>> 41030295446ddbbb5f2f235b4a2d65d560bc778b
 my %passive_attack_str = (
 	"[" => "pass.", # when killed
 	"(" => "pass."  # when hit in melee
